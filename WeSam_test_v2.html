@@ -167,13 +167,14 @@ var camera;
                         BABYLON.SceneLoader.ImportMesh(
                             "", "./", "human_cell.glb", scene,
                             function (meshes) {
-                                const heart = meshes[0];
+                                const cell = meshes[0];
 
                                 // Position & scale
                                 //                 x  y   z (y is up vector)
-                                heart.position.set(0, 5, -20);
-                                heart.scaling.setAll(2.5);        // make it bigger
-                                heart.isPickable = true;        // allow grabbing
+                                cell.position.set(0, 5, -20);
+                                cell.rotation(45, 0, 0);
+                                cell.scaling.setAll(2.5);        // make it bigger
+                                cell.isPickable = true;        // allow grabbing
 
                                 /* DEBUG COLOR (uncomment if model still shows black)
                                 const mat = new BABYLON.StandardMaterial("heartMat", scene);
