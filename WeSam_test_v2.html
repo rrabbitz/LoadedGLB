@@ -89,13 +89,13 @@ var camera;
                         camera.attachControl(canvas, true);
 
                         // Ground
-                        //const ground = BABYLON.Mesh.CreateGround("ground", 500, 500, 10, scene);
-                        //ground.position.y = -10;
+                        const ground = BABYLON.Mesh.CreateGround("ground", 500, 500, 10, scene);
+                        ground.position.y = -10;
 
-                        var ground = BABYLON.MeshBuilder.CreateGround("ground", { width: 1000, height: 1000 }, scene);
-            ground.physicsImpostor = new BABYLON.PhysicsImpostor(ground, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0, friction: 0.8, restitution: 0.5, disableBidirectionalTransformation: true }, scene);
-            ground.checkCollisions = true;
-            ground.material = new BABYLON.GridMaterial("mat", scene);
+                        //var ground = BABYLON.MeshBuilder.CreateGround("ground", { width: 1000, height: 1000 }, scene);
+            //ground.physicsImpostor = new BABYLON.PhysicsImpostor(ground, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0, friction: 0.8, restitution: 0.5, disableBidirectionalTransformation: true }, scene);
+            //ground.checkCollisions = true;
+            //ground.material = new BABYLON.GridMaterial("mat", scene);
 
                         /* ———————————————————
                            2.  DEMO BOXES (unchanged)
