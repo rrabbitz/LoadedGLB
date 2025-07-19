@@ -143,18 +143,18 @@ var camera;
                         BABYLON.SceneLoader.ImportMesh(
                             "", "./", "abdomen_anatomy.glb", scene,
                             function (meshes) {
-                                const heart = meshes[0];
+                                const ab = meshes[0];
 
                                 // Position & scale
                                 //                 x  y   z (y is up vector)
-                                heart.position.set(0, 5, 20);
-                                heart.scaling.setAll(.005);        // make it bigger
-                                heart.isPickable = true;        // allow grabbing
+                                ab.position.set(0, 2, 20);
+                                ab.scaling.setAll(.005);        // make it bigger
+                                ab.isPickable = true;        // allow grabbing
 
                                 /* DEBUG COLOR (uncomment if model still shows black)
                                 const mat = new BABYLON.StandardMaterial("heartMat", scene);
                                 mat.diffuseColor = new BABYLON.Color3(0.8, 0.1, 0.1);
-                                heart.material = mat;
+                                ab.material = mat;
                                 */
 
                                 console.log("Abdomen loaded!");
@@ -179,7 +179,7 @@ var camera;
                                 /* DEBUG COLOR (uncomment if model still shows black)
                                 const mat = new BABYLON.StandardMaterial("heartMat", scene);
                                 mat.diffuseColor = new BABYLON.Color3(0.8, 0.1, 0.1);
-                                heart.material = mat;
+                                cell.material = mat;
                                 */
 
                                 console.log("Human cell loaded!");
